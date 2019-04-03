@@ -1,0 +1,45 @@
+{
+  "name": "@franleplant/react-do-exp",
+  "version": "0.0.0",
+  "description": "Do expression in react",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "format": "prettier --write \"src/**/*.ts\" \"*.{json,js}\"",
+    "format-check": "prettier --check \"src/**/*.ts\" \"*.{json,js}\"",
+    "test": "npm run format-check"
+  },
+  "keywords": [
+    "react",
+    "do",
+    "expression"
+  ],
+  "author": "franleplant@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.8.10",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "1.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.4.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
